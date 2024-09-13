@@ -11,7 +11,6 @@
 
 .sidebar {
   width: 20%;
-  padding: 10px;
   border-right: 1px solid #ddd;
   position: fixed;
   top: 0;
@@ -21,6 +20,17 @@
   background: rgb(0, 0, 0);
   color: whitesmoke;
   box-shadow: 9px -4px 50px rgba(0, 0, 0, 0.373);
+}
+.option-tab{
+  background-color: #000000;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  width: 100px;
+  overflow: hidden;
+}
+.option-tab:hover{
+  box-shadow: 0 0 7px whitesmoke , inset 0 0 7px whitesmoke;
 }
 .decription{
   margin-bottom: 10px;
@@ -36,10 +46,37 @@
 .product-item{
   border-radius: 20px;
   border: 1px solid black;
+  transition: box-shadow 0.3s ease-in,ox-shadow 0.3s ease-out;
+  overflow: hidden;
 }
+.product-item img{
+  transition: transform 0.3s ease-in-out;
+}
+.product-item img:hover{
+  transform: scale(1.2);
+}
+
 .product-item:hover{
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.57);
 }
+.category {
+  display: flex;
+  justify-content: left;
+  padding-left: 20px;
+  height: 50px;
+  align-items: center;
+  background-color: #000000; /* Default background color */
+  color: #ffffff; /* Default text color */
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.category:hover {
+  background-color: #ffffff;
+  color: black;
+  cursor: pointer;
+  transform: translateY(-2px) scaleY(1); /* Move up by 2px and scale height */
+}
+
 
 .sorting{
   display: flex;
